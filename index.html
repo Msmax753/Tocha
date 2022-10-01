@@ -32,8 +32,8 @@
                 </div>
 
                 <div class="header__reg">
-                    <button class="open">Вход</button>
-                    <button class="reg">Регистрация</button>
+                    <button id="open_modal1" class="open">Вход</button>
+                    <button id="open_modal2" class="reg">Регистрация</button>
                 </div>
 
             </div>
@@ -41,7 +41,7 @@
     </header>
 
 
-    <main class="intro">
+    <section class="intro">
         <div class="container">
             <div class="intro__inner">
                 <div class="intro__content">
@@ -55,10 +55,10 @@
                 <img src="assets/img/Intro__img.png" alt="">
             </div>
         </div>
-    </main>
+    </section>
 
 
-    <main class="info">
+    <section class="info">
         <div class="container">
             <div class="info__inner">
                 <div class="info__content">
@@ -110,10 +110,10 @@
 
             </div>
         </div>
-    </main>
+    </section>
 
 
-    <main class="section2">
+    <section class="section">
         <div class="container">
 
             <div class="rates">
@@ -183,10 +183,10 @@
             </div>
 
         </div>
-    </main>
+    </section>
 
 
-    <main class="reviews">
+    <section class="reviews">
         <div class="container">
             <h1 class="reviews__header">Отзывы клиентов</h1>
             <img class="img" src="assets/img/Reviews_svg.svg" alt="">
@@ -249,7 +249,7 @@
 
             </div>
         </div>
-    </main>
+    </section>
 
 
     <div class="form">
@@ -310,16 +310,55 @@
         </div>
     </footer>
 
+
     
-    
+
+    <div class="modal hidden" id="modal_1">
+        <div id="modal1_window" class="modal__window">
+
+            <button id="close_modal1" class="modal__close" > <img  src="assets/img/Modal_close.svg" alt=""></button>
+
+            <div class="modal__content">                
+                <div class="modal__content">
+                    <div class="modal__title">Вход</div>
+                    <input class="input__tel" type="tel" placeholder="Телефон">
+                    <input class="input__pssword" type="password" placeholder="Пароль">
+                    <a href="">Напомнить пароль</a>
+                    <button class="button__sign_in">Войти</button>
+                </div>
+            </div> 
+
+        </div>
+
+    </div>
+
+    <div class="modal hidden" id="modal_2">
+        <div id="modal2_window" class="modal__window">
+
+            <button id="close_modal2" class="modal__close" > <img  src="assets/img/Modal_close.svg" alt=""></button>
+
+            <div class="modal__content">                
+                <div class="modal__content">
+                    <div class="modal__title">Регистрация</div>
+                    <input class="input__tel" type="tel" placeholder="Телефон">
+                    <input class="input__pssword" type="password" placeholder="Пароль">
+                    <input class="input__email" type="email" placeholder="Электронная почта">
+                    <input class="input__pssword" type="password" placeholder="Повторите пароль">
+                    <button class="button__sign_in">Войти</button>
+                </div>
+            </div> 
+
+        </div>
+
+    </div>
 
 
 
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-<script src="assets/Js/slick/slick.min.js"></script>
-<script src="assets/Js/app.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="assets/Js/slick/slick.min.js"></script>
+    <script src="assets/Js/app.js"></script>
 
 
 </body>
