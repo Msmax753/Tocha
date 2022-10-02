@@ -32,9 +32,9 @@ $(function() {
             }
           ]
         
-    })
+    });
 
-})
+});
 
 
 const open_modal1 = document.querySelector('#open_modal1');
@@ -67,6 +67,13 @@ modal1.addEventListener ('click' , function() {
     body.style.overflow = '';
 });
 
+document.addEventListener('keydown', function(e) {
+    if( e.keyCode == 27 ){
+    modal1.classList.add('hidden');
+    body.style.overflow = '';
+    }
+});
+
 
 
 const open_modal2 = document.querySelector('#open_modal2');
@@ -97,3 +104,37 @@ modal2.addEventListener ('click' , function() {
     modal2.classList.add('hidden');
     body.style.overflow = '';
 });
+
+
+document.addEventListener('keydown', function(e) {
+    if( e.keyCode == 27 ){
+    modal2.classList.add('hidden');
+    body.style.overflow = '';
+    }
+});
+
+
+
+const airplane1 = document.querySelector('#airplane-1');
+const airplane2 = document.querySelector('#airplane-2');
+const airplane3 = document.querySelector('#airplane-3');
+
+
+airplane1.classList.remove('move1');
+airplane2.classList.remove('move2');
+airplane3.classList.remove('move3');
+
+if (window.performance) {
+    setTimeout(function(){
+        airplane1.classList.add('move1');
+        setTimeout(function(){
+            airplane2.classList.add('move2');
+            setTimeout(function(){
+                airplane3.classList.add('move3');
+            },1000);
+        },500);
+    },200);
+};
+
+
+

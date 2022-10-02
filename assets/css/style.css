@@ -26,6 +26,7 @@ button {
     font-size: 16px;
     font-weight: 700;
     cursor: pointer;
+    outline: 0;
 }
 
 h1 {
@@ -41,6 +42,12 @@ h1 {
     max-width: 1440px;
     margin: 0 auto;
     padding: 0 100px;
+}
+
+@media (max-width: 1200px) {
+    body {
+        background: #000;
+    }
 }
 
 
@@ -96,11 +103,79 @@ h1 {
     justify-content: space-between;
 }
 
-.intro__inner img {
+.intro__img__1 {
+    z-index: 1;
+    position: relative;
     object-fit: cover;
     width: 725px;
     height: 583px;
 }
+
+.intro__img__2 {
+    width: 87px;
+    height: 38px;
+    position: absolute;
+    z-index: 2;
+    opacity: 0;
+}
+
+.move1 {
+    opacity: 1;
+    animation: move1 4s ease ;
+    animation-fill-mode:forwards;
+}
+
+@keyframes move1 {
+    0% {position: absolute; left: -100px; top: -100px; }
+    100% {position: absolute; left: 850px; top: 250px; }
+}
+
+
+.intro__img__3 {
+    width: 61px;
+    height: 32px;
+    position: absolute;
+    z-index: 2;
+    opacity: 0;
+}
+
+
+.move2 {
+    opacity: 1;
+    animation: move2 4s ease ;
+    animation-fill-mode:forwards;
+}
+
+@keyframes move2 {
+    0% {position: absolute; left: 2000px; top: -100px; }
+    100% {position: absolute; left: 1500px; top: 220px; }
+}
+
+.intro__img__4 {
+    width: 100px;
+    height: 62px;
+    position: absolute;
+    z-index: 2;
+    opacity: 0;
+}
+
+
+.move3 {
+    opacity: 1;
+    animation: move3 4s ease ;
+    animation-fill-mode:forwards;
+}
+
+@keyframes move3 {
+    0% {position: absolute; left: -200px; top: 1000px; }
+    100% {position: absolute; left: 1250px; top: 750px; }
+}
+
+
+
+
+
+
 
 .intro__content .title {
     font-size: 50px;
@@ -589,6 +664,7 @@ h1 {
 
 .modal {
     opacity: 1;
+    z-index: 5;
     position: fixed;
     top: 0;
     left: 0;
@@ -610,7 +686,7 @@ h1 {
     max-height: 80%;
     padding: 100px 70px 140px;
     position: absolute;
-    z-index: 1;
+    z-index: 6;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -621,7 +697,7 @@ h1 {
     position: relative;
     top: -75px;
     left: 365px;
-    z-index: 2;
+    z-index: 7;
     background: none;
 }
 
