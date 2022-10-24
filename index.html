@@ -5,9 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/media.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="assets/css/animate.css">
     <link rel="stylesheet" href="assets/Js/slick/slick.css">
     <link rel="stylesheet" href="assets/Js/slick/slick-theme.css">
 
@@ -17,355 +19,414 @@
 </head>
 
 <body>
-
-    <header class="header">
-        <div class="container">
-            <div class="header__inner">
-
-                <div class="header__logo">
-                    <div class="header__logo__img">
-                        <img src="assets/img/Header__logo.png" alt="">
-                    </div>
-                    <div class="header__logo__text">
-                        tocha
-                    </div>
-                </div>
-
-                <div class="header__reg">
-                    <button id="open_modal1" class="open">Вход</button>
-                    <button id="open_modal2" class="reg">Регистрация</button>
-                </div>
-
-            </div>
-        </div>
-    </header>
+    <main class="main">
 
 
-    <section class="intro">
-        <div class="container">
-            <div class="intro__inner">
-                <div class="intro__content">
-                    <h1 class="title"><span>Telegram чат</span>
-                    <br>на вашем сайте</h1>
-                    <h2 class="text">Общение с клиентами станет простым
-                        <br>и удобным, а подключение займет 5 минут.
-                        <br>Первый месяц — <span>бесплатно!</span></h2>
-                    <button>Подключить</button>
-                </div>
-                <img class="intro__img__1" src="assets/img/Intro_img_2.png" alt="">
-                <img id="airplane-1" class="intro__img__2 move1" src="assets/img/Airplane_1.svg" alt="">
+        <!-- Header -->
+            <header class="header">
+                <div class="container">
+                    <div class="header__inner">
 
-                <img id="airplane-2" class="intro__img__3 move2" src="assets/img/Airplane_2.svg" alt="">
-
-                <img id="airplane-3" class="intro__img__4 move3" src="assets/img/Airplane_3.svg" alt="">
-
-            </div>
-        </div>
-    </section>
-
-
-    <section class="info">
-        <div class="container">
-            <div class="info__inner">
-                <div class="info__content">
-                    <h1 class="info__title">Tocha Online — это</h1>
-
-
-                    <div class="intro__list">
-                        <div class="intro__list__item">
-                            <img src="assets/img/telegram__svg.svg" alt="">
-
-                            <div class="list__info">
-                                <div class="list__title">Ничего лишнего</div>
-                                <div class="list__text">Отсутствие лишних приложений для операторов. Оператору не нужно учиться работать с чатом</div>
+                        <div class="header__logo">
+                            <div class="header__logo__img">
+                                <img src="assets/img/Header__logo.png" alt="">
+                            </div>
+                            <div class="header__logo__text">
+                                tocha
                             </div>
                         </div>
 
-                        <div class="intro__list__item">
-                            <img src="assets/img//pic2_svg.svg" alt="">
 
-                            <div class="list__info">
-                                <div class="list__title">Простота</div>
-                                <div class="list__text">Простая установка на сайт</div>
-                            </div>
+
+                        <div class="header__reg">
+                            <button id="open_modal1" class="open">Вход</button>
+                            <button id="open_modal2" class="reg">Регистрация</button>
                         </div>
 
-                        <div class="intro__list__item">
-                            <img src="assets/img/pic3_svg.svg" alt="">
-
-                            <div class="list__info">
-                                <div class="list__title">Несколько ассистентов</div>
-                                <div class="list__text">Возможность подключения нескольких ассистентов</div>
-                            </div>
-                        </div>
-
-                        <div class="intro__list__item">
-                            <img src="assets/img/pic4_svg.svg" alt="">
-
-                            <div class="list__info">
-                                <div class="list__title">Кастомизация</div>
-                                <div class="list__text">Настройка интерфейса под нужды сайта</div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <img src="assets/img/info__iphone__svg.svg" alt="">
-
-            </div>
-        </div>
-    </section>
-
-
-    <section class="section">
-        <div class="container">
-
-            <div class="rates">
-                <h1 class="rates__title">Тарифы</h1>
-                <h2 class="rates__text">Стоимость зависит от трафика сайта</h2>
-                <div class="rates__items">
-                    <div class="rates__card">
-                        <div class="card__header">Бесплатно</div>
-                        <h3>Пробный период на 1 месяц</h3>
-                        <h4>0₽/первый месяц</h4>
-                        <button>Подключить за 0₽</button>
-                    </div>
-
-                    <div class="rates__card">
-                        <div class="card__header">Базовый</div>
-                        <h3>Менее 1000 посещений в сутки</h3>
-                        <h4>200₽/месяц</h4>
-                        <button>Подключить за 200₽</button>
-                    </div>
-
-                    <div class="rates__card">
-                        <div class="card__header">Премиум</div>
-                        <h3>Более 1000 посещений в сутки</h3>
-                        <h4>500₽/месяц</h4>
-                        <button>Подключить за 500₽</button>
                     </div>
                 </div>
+            </header>
+
+            <div class="menu-fixed" id="menu-fixed">
+                    <button class="menu-open">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
             </div>
 
-
-            <div class="steps">
-                <h1>Всего 3 шага для подключения Telegram чата</h1>
-                <img src="assets/img/lines for section.png" alt="">
-            
-                <div class="step__items">
-                    <div class="step step__1">
-                        <div>
-                            <div class="circle">1</div>
-                            <div class="step__title">Telegram bot</div>
-                            <div class="step__text">Вы создаёте Telegram бота для вашего сайта</div>
-                            <img src="assets/img/Step__1.png" alt="">
-                        </div>
-                    </div>
-
-                    <div class="step step__2">
-                        <div>
-                            <div class="circle">2</div>
-                            <div class="step__title">Подключение Tocha</div>
-                            <div class="step__text">Tocha подключает Telegram бота к вашиму сайту</div>
-                            <img src="assets/img/Step__2.png" alt="">
-                        </div>
-                    </div>
-
-                    <div class="step step__3">
-                        <div class="circle">3</div>
-                        <div class="step__title">Telegram-чат</div>
-                        <div class="step__text">Консультант отвечает на вопросы посетителей сайта</div>
-                        
-                    <div class="step__img">
-                        <img src="assets/img/Step__3.png" alt="">
-                    </div>
-
-                    </div>
-
-                </div>
+            <div class="menu ">
                 
+                <div class="menu__window" id="menu__window">
+                    <div class="menu__inner">
+                        <div class="menu__content" id="menu">
+                            <button id="open_modal1" class="open">Вход</button>
+                            <button id="open_modal2" class="reg">Регистрация</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-        </div>
-    </section>
+        <!-- Header -->
 
 
-    <section class="reviews">
-        <div class="container">
-            <h1 class="reviews__header">Отзывы клиентов</h1>
-            <img class="img" src="assets/img/Reviews_svg.svg" alt="">
-
-            <div class="reviews__items">
-
-                <div class="item_1">
-                    <div class="reviews__card">
-                        <div class="reviews__content">
-                            <h3 class="title">Как же удобно!</h3>
-                            <h4 class="text">В рамках спецификации современных стандартов, базовые сценарии поведения пользователей, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут преданы социально-демократической анафеме.</h4>
+        <!-- Intro -->
+            <section class="intro" id = "intro">
+                <div class="container">
+                    <div class="intro__inner">
+                        <div class="intro__content">
+                            <h1 class="title"><span>Telegram чат</span>
+                            <br>на вашем сайте</h1>
+                            <h2 class="text">Общение с клиентами станет простым
+                                <br>и удобным, а подключение займет 5 минут.
+                                <br>Первый месяц — <span>бесплатно!</span></h2>
+                            <button>Подключить</button>
                         </div>
-                    </div>
-                
-                    <div class="reviews__info">
-                        <img src="assets/img/Reviews_photo_1.jpg" alt="">
-                        <div class="img__info">
-                            <div class="title">Анна Купер</div>
-                            <div class="text">romashka.ru</div>
-                        </div>
-                    </div>
+                        <img class="intro__img__1" src="assets/img/Intro_img_2.png" alt="">
+                        <img id="airplane-1" class="intro__img__2 move1" src="assets/img/Airplane_1.svg" alt="">
 
+                        <img id="airplane-2" class="intro__img__3 move2" src="assets/img/Airplane_2.svg" alt="">
+
+                        <img id="airplane-3" class="intro__img__4 move3" src="assets/img/Airplane_3.svg" alt="">
+
+                    </div>
                 </div>
+            </section>
+        <!-- Intro -->
 
-                <div class="item_2">
-                    <div class="reviews__card">
-                        <div class="reviews__content">
-                            <h3 class="title">Теперь мы идем в ногу со временем</h3>
-                            <h4 class="text">А ещё интерактивные прототипы превращены в посмешище, хотя само их существование приносит несомненную пользу обществу. Банальные, но неопровержимые выводы, а также тщательные исследования конкурентов формируют сеть.</h4>
+
+        <!-- Info -->
+            <section id="info" class="info">
+                <div class="container">
+                    <div class="info__inner">
+                        <div class="info__content">
+                            <h1 class="info__title">Tocha Online — это</h1>
+
+
+                            <div class="info__list">
+
+                                <div id="info1" class="info__list__item wow animate__backInLeft">
+                                    <img src="assets/img/telegram__svg.svg" alt="">
+
+                                    <div class="list__info">
+                                        <div class="list__title">Ничего лишнего</div>
+                                        <div class="list__text">Отсутствие лишних приложений для операторов. Оператору не нужно учиться работать с чатом</div>
+                                    </div>
+                                </div>
+
+                                <div id="info2" class="info__list__item wow animate__backInLeft">
+                                    <img src="assets/img//pic2_svg.svg" alt="">
+
+                                    <div class="list__info">
+                                        <div class="list__title">Простота</div>
+                                        <div class="list__text">Простая установка на сайт</div>
+                                    </div>
+                                </div>
+
+                                <div id="info3" class="info__list__item  wow animate__backInLeft">
+                                    <img src="assets/img/pic3_svg.svg" alt="">
+
+                                    <div class="list__info">
+                                        <div class="list__title">Несколько ассистентов</div>
+                                        <div class="list__text">Возможность подключения нескольких ассистентов</div>
+                                    </div>
+                                </div>
+
+                                <div id="info4" class="info__list__item  wow animate__backInLeft">
+                                    <img src="assets/img/pic4_svg.svg" alt="">
+
+                                    <div class="list__info">
+                                        <div class="list__title">Кастомизация</div>
+                                        <div class="list__text">Настройка интерфейса под нужды сайта</div>
+                                    </div>
+                                </div>
+
+                            </div>
+
                         </div>
-                    </div>
 
-                    <div class="reviews__info">
-                        <img src="assets/img/Reviews_photo_2.jpg" alt="">
-                        <div class="img__info">
-                            <div class="title">Андрей Васильев</div>
-                            <div class="text">samogon-ont.ru</div>
-                        </div>
-                    </div>
+                        <img src="assets/img/info__iphone__svg.svg" alt="">
 
+                    </div>
                 </div>
+            </section>
+        <!-- Info -->
 
-                <div class="item_3">
-                    <div class="reviews__card">
-                        <div class="reviews__content">
-                            <h3 class="title">Теперь мы идем в ногу со временем</h3>
-                            <h4 class="text">А ещё интерактивные прототипы превращены в посмешище, хотя само их существование приносит несомненную пользу обществу. Банальные, но неопровержимые выводы, а также тщательные исследования конкурентов формируют сеть.</h4>
+
+        <!-- Section -->
+            <section class="section">
+                <div class="container">
+
+                    <div class="rates">
+                        <h1 class="rates__title">Тарифы</h1>
+                        <h2 class="rates__text">Стоимость зависит от трафика сайта</h2>
+                        <div class="rates__items">
+                            <div class="rates__card ">
+                                <div class="card__header">Бесплатно</div>
+                                <h3>Пробный период на 1 месяц</h3>
+                                <h4>0₽/первый месяц</h4>
+                                <button>Подключить за 0₽</button>
+                            </div>
+
+                            <div class="rates__card">
+                                <div class="card__header">Базовый</div>
+                                <h3>Менее 1000 посещений в сутки</h3>
+                                <h4>200₽/месяц</h4>
+                                <button>Подключить за 200₽</button>
+                            </div>
+
+                            <div class="rates__card">
+                                <div class="card__header">Премиум</div>
+                                <h3>Более 1000 посещений в сутки</h3>
+                                <h4>500₽/месяц</h4>
+                                <button>Подключить за 500₽</button>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="reviews__info">
-                        <img src="assets/img/Reviews_photo_2.jpg" alt="">
-                        <div class="img__info">
-                            <div class="title">Анна Купер</div>
-                            <div class="text">samogon-ont.ru</div>
-                        </div>
-                    </div>
+
+                    <div class="steps">
+                        <h1>Всего 3 шага для подключения Telegram чата</h1>
+                        <img class="img__line" src="assets/img/lines for section.png" alt="">
                     
-                </div>
+                        <div class="step__items">
+                            <div class="step step__1">
+                                    <div class="circle">1</div>
+                                    <div class="step__title">Telegram bot</div>
+                                    <div class="step__text">Вы создаёте Telegram бота для вашего сайта</div>
+                                    <img src="assets/img/Step__1.png" alt="">
+                            </div>
 
-            </div>
-        </div>
-    </section>
+                            <div class="step step__2">
+                                <div class="circle">2</div>
+                                <div class="step__title">Подключение Tocha</div>
+                                <div class="step__text">Tocha подключает Telegram бота к вашиму сайту</div>
+                                <img src="assets/img/Step__2.png" alt="">
+                            </div>
 
+                            <div class="step step__3">
+                                <div class="circle">3</div>
+                                <div class="step__title">Telegram-чат</div>
+                                <div class="step__text">Консультант отвечает на вопросы посетителей сайта</div>
+                                <img src="assets/img/Step__3.png" alt="">
+                            </div>
 
-    <div class="form">
-        <div class="container">
-            <div class="form__inner">
-
-                <div class="form__img">
-                    <img src="assets/img/Img_for_bg_form_png.png" alt="">
-                </div>
-
-                <div class="form__content">
-                    <div class="form__title">Подключите Telegram чат уже сегодня</div>
-
-                    <form cass="email" action="/" method="post">
-                        <input class="email__input" type="email" placeholder="Введите e-mail">
-                        <button class="email__btn" type="submit">Отправить</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer__inner">
-                <div id="footer_logo" class="footer__logo">
-                    <a href="#"><img src="assets/img/Footer_logo.svg" alt=""></a>
-                    <div class="text">tocha</div>
-                </div>
-                <div class="footer__content">
-
-                    <div class="footer__col">
-                        <h3 class="title">Telegram чат</h3>
-                        <h4><a href="#" target="_blank">О нас</a></h4>
-                        <h4><a href="#" target="_blank">Партнеры</a></h4>
-                        <h4><a href="#" target="_blank">Инструкция</a></h4>
-                        <h4><a href="#" target="_blank">Цены</a></h4>
-                        <h4><a href="#" target="_blank">Контакты</a></h4>
-                    </div>
-
-                    <div class="footer__col">
-                        <h3 class="title">Поддержка</h3>
-                        <h4><a href="#" target="_blank">Центр поддержки</a></h4>
-                        <h4><a href="#" target="_blank">Политика конфеденциальности</a>/h4>
-                        <h4><a href="#" target="_blank">Документы оферта</a></h4>
-                        <h4><a href="#" target="_blank">Документы оферта</a></h4>
-                        <h4><a href="#" target="_blank">Статус</a></h4>
+                        </div>
+                        
                     </div>
 
                 </div>
-            </div>
-        </div>
-    
-        <div class="footer__bottom">
-            <div class="container">
-                <div class="content">© 2021 Tocha. Все права защищены</div>
-            </div>
-        </div>
-    </footer>
+            </section>
+        <!-- Section -->
 
 
-    
+        <!-- Reviews -->
+            <section class="reviews">
+                <div class="container">
+                    <h1 class="reviews__header">Отзывы клиентов</h1>
+                    <img class="img" src="assets/img/Reviews_svg.svg" alt="">
 
-    <div class="modal hidden" id="modal_1">
-        <div id="modal1_window" class="modal__window">
+                    <div class="reviews__items">
 
-            <button id="close_modal1" class="modal__close" > <img  src="assets/img/Modal_close.svg" alt=""></button>
+                        <div class="item_1">
+                            <div class="reviews__card">
+                                <div class="reviews__content">
+                                    <h3 class="title">Как же удобно!</h3>
+                                    <h4 class="text">В рамках спецификации современных стандартов, базовые сценарии поведения пользователей, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут преданы социально-демократической анафеме.</h4>
+                                </div>
+                            </div>
+                        
+                            <div class="reviews__info">
+                                <img src="assets/img/Reviews_photo_1.jpg" alt="">
+                                <div class="img__info">
+                                    <div class="title">Анна Купер</div>
+                                    <div class="text">romashka.ru</div>
+                                </div>
+                            </div>
 
-            <div class="modal__content">                
-                <div class="modal__content">
-                    <div class="modal__title">Вход</div>
-                    <input class="input__tel" type="tel" placeholder="Телефон">
-                    <input class="input__pssword" type="password" placeholder="Пароль">
-                    <a href="">Напомнить пароль</a>
-                    <button class="button__sign_in">Войти</button>
+                        </div>
+
+                        <div class="item_2">
+                            <div class="reviews__card">
+                                <div class="reviews__content">
+                                    <h3 class="title">Теперь мы идем в ногу со временем</h3>
+                                    <h4 class="text">А ещё интерактивные прототипы превращены в посмешище, хотя само их существование приносит несомненную пользу обществу. Банальные, но неопровержимые выводы, а также тщательные исследования конкурентов формируют сеть.</h4>
+                                </div>
+                            </div>
+
+                            <div class="reviews__info">
+                                <img src="assets/img/Reviews_photo_2.jpg" alt="">
+                                <div class="img__info">
+                                    <div class="title">Андрей Васильев</div>
+                                    <div class="text">samogon-ont.ru</div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="item_3">
+                            <div class="reviews__card">
+                                <div class="reviews__content">
+                                    <h3 class="title">Теперь мы идем в ногу со временем</h3>
+                                    <h4 class="text">А ещё интерактивные прототипы превращены в посмешище, хотя само их существование приносит несомненную пользу обществу. Банальные, но неопровержимые выводы, а также тщательные исследования конкурентов формируют сеть.</h4>
+                                </div>
+                            </div>
+
+                            <div class="reviews__info">
+                                <img src="assets/img/Reviews_photo_2.jpg" alt="">
+                                <div class="img__info">
+                                    <div class="title">Анна Купер</div>
+                                    <div class="text">samogon-ont.ru</div>
+                                </div>
+                            </div>
+                            
+                        </div>
+
+                    </div>
                 </div>
-            </div> 
+            </section>
+        <!-- Reviews -->
 
-        </div>
 
-    </div>
+        <!-- Form -->
+            <div class="form">
+                <div class="container">
+                    <div class="form__inner">
 
-    <div class="modal hidden" id="modal_2">
-        <div id="modal2_window" class="modal__window">
+                        <div class="form__img">
+                            <img src="assets/img/Img_for_bg_form_png.png" alt="">
+                        </div>
 
-            <button id="close_modal2" class="modal__close" > <img  src="assets/img/Modal_close.svg" alt=""></button>
+                        <div class="form__content">
+                            <div class="form__title">Подключите Telegram чат уже сегодня</div>
 
-            <div class="modal__content">                
-                <div class="modal__content">
-                    <div class="modal__title">Регистрация</div>
-                    <input class="input__tel" type="tel" placeholder="Телефон">                   
-                    <input class="input__email" type="email" placeholder="Электронная почта">
-                    <input class="input__pssword" type="password" placeholder="Пароль">
-                    <input class="input__pssword" type="password" placeholder="Повторите пароль">
-                    <button class="button__sign_in">Войти</button>
+                            <form cass="email" action="/" method="post">
+                                <input class="email__input" type="email" placeholder="Введите e-mail">
+                                <button class="email__btn" type="submit">Отправить</button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
-            </div> 
+            </div>
+        <!-- Form -->
+
+
+        <!-- Footer -->
+            <footer class="footer">
+                <div class="container">
+                    <div class="footer__inner">
+                        <div id="footer__logo" class="footer__logo">
+                            <a href="#"><img src="assets/img/Footer_logo.svg" alt=""></a>
+                            <div class="text">tocha</div>
+                        </div>
+                        <div class="footer__content">
+
+                            <div class="footer__col">
+                                <h3 class="title">Telegram чат</h3>
+                                <h4><a href="#" target="_blank">О нас</a></h4>
+                                <h4><a href="#" target="_blank">Партнеры</a></h4>
+                                <h4><a href="#" target="_blank">Инструкция</a></h4>
+                                <h4><a href="#" target="_blank">Цены</a></h4>
+                                <h4><a href="#" target="_blank">Контакты</a></h4>
+                            </div>
+
+                            <div class="footer__col">
+                                <h3 class="title">Поддержка</h3>
+                                <h4><a href="#" target="_blank">Центр поддержки</a></h4>
+                                <h4><a href="#" target="_blank">Политика конфеденциальности</a>/h4>
+                                <h4><a href="#" target="_blank">Документы оферта</a></h4>
+                                <h4><a href="#" target="_blank">Документы оферта</a></h4>
+                                <h4><a href="#" target="_blank">Статус</a></h4>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="footer__bottom">
+                    <div class="container">
+                        <div class="content">© 2021 Tocha. Все права защищены</div>
+                    </div>
+                </div>
+            </footer>
+        <!-- Footer -->
+
+    </main>
+
+    
+    <!-- Modal_1 -->
+        <div class="modal hidden" id="modal_1">
+            <div id="modal1_window" class="modal__window">
+
+                <button id="close_modal1" class="modal__close" > <img  src="assets/img/Modal_close.svg" alt=""></button>
+
+                <div class="modal__content">                
+                    <div class="modal__content">
+                        <div class="modal__title">Вход</div>
+                        <input class="input__tel" type="tel" placeholder="Телефон">
+
+                        <label class="password__input">
+                            <input class="input__password" id="pwd" type="password" placeholder="Пароль">
+                            <div class="password__btn" id="eye">
+                                <i class="fa-solid fa-eye"></i>
+                            </div>
+                        </label>
+
+                        <a href="">Напомнить пароль</a>
+                        <button type="submit" class="button__sign_in">Войти</button>
+                    </div>
+                </div> 
+
+            </div>
 
         </div>
+    <!-- Modal_1 -->
 
-    </div>
 
+    <!-- Modal_2 -->
+        <div class="modal hidden" id="modal_2">
+            <div id="modal2_window" class="modal__window">
+
+                <button id="close_modal2" class="modal__close" > <img  src="assets/img/Modal_close.svg" alt=""></button>
+
+                <div class="modal__content">                
+                    <div class="modal__content">
+                        <div class="modal__title">Регистрация</div>
+                        <input class="input__tel" type="tel" placeholder="Телефон">                   
+                        <input class="input__email" type="email" placeholder="Электронная почта">
+
+                        <label class="password__input">
+                            <input class="input__password" id="pwd-2" type="password" placeholder="Пароль">
+                            <div class="password__btn-2" id="eye-2">
+                                <i class="fa-solid fa-eye"></i>
+                            </div>
+                        </label>
+
+                        <label class="password__input">
+                            <input class="input__password" id="pwd-3" type="password" placeholder="Повторите пароль">
+                            <div class="password__btn" id="eye-3">
+                                <i class="fa-solid fa-eye"></i>
+                            </div>
+                        </label>
+
+                        <button type="submit" class="button__sign_in">Войти</button>
+                    </div>
+                </div> 
+
+            </div>
+
+        </div>
+    <!-- Modal_2 -->
 
 
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="assets/Js/wow.min.js"></script>
     <script src="assets/Js/slick/slick.min.js"></script>
     <script src="assets/Js/app.js"></script>
-
+    <script>
+        new WOW().init();
+    </script>
 
 </body>
 </html>

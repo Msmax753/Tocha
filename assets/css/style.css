@@ -5,6 +5,11 @@ body {
     line-height: 1.6;
     color: #1D2530;
     background: rgba(242, 247, 255, 0.5);
+    cursor: default;
+}
+
+.body-hidden {
+    overflow: hidden;
 }
 
 *, 
@@ -17,6 +22,10 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0;
 }
 
+main {
+    overflow: hidden;
+}
+
 button {
     font-family: 'Montserrat', sans-serif;
     color: #FFFFFF;
@@ -27,7 +36,13 @@ button {
     font-weight: 700;
     cursor: pointer;
     outline: 0;
+    transition: background-color 300ms;
 }
+
+button:hover {
+    color: #685ED6;
+    background-color: #F1E4FF;
+  }
 
 h1 {
     font-size: 46px;
@@ -44,18 +59,13 @@ h1 {
     padding: 0 100px;
 }
 
-@media (max-width: 1200px) {
-    body {
-        background: #000;
-    }
-}
-
 
 /*Header*/
 
 .header {
     width: 100%;
     padding-top: 32px;
+   
 }
 
 .header__inner {
@@ -76,19 +86,172 @@ h1 {
 
 .header__reg button {
     padding: 10px 20px;
+    transition: .2s linear;
 }
 
-
-.header__reg .open {
+.header__reg button:hover {
     color: #685ED6;
     background-color: #F1E4FF;
 }
 
+
+.header__reg .open {
+    color: #FFFFFF;
+    background-color: #685ED6;
+}
+
 .header__reg .reg {
+    padding: 10px 40px;
     margin-left: 12px;
     color: #FFFFFF;
     background-color: #685ED6;
 }
+
+
+.menu {
+    opacity: 0;
+    visibility: hidden;
+    z-index: 5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(223, 223, 223, 0.562);
+    transition: all 0.35s ease-in;
+    
+}
+
+
+.animate__fadeInDown {
+    animation: 1.5s;
+}
+.menu-visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.menu__window {
+    position: fixed;
+    position: absolute;
+    z-index: 6;
+    top: 0;
+
+    width: 100%;
+    background: #FFFFFF;
+    min-height: 60%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.menu__inner {
+    width: 100%;
+}
+
+.menu__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    
+}
+
+.menu__content button {
+    width: 80%;
+    outline: 0;
+    padding: 12px 20px;
+}
+
+
+.menu__content button:last-child {
+    width: 80%;
+    margin-top: 20px 
+}
+
+
+.menu__close {
+    position: relative;
+    top: 20px;
+    left: 84%;
+    z-index: 8;
+    background: none;
+}
+
+.menu__close:hover {
+    background-color: #FFFFFF;
+}
+
+.menu-fixed {
+    background-color: rgba(242, 247, 255, 0.8); 
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 7;
+    width: 100%;
+    position: fixed;
+    height: 80px;
+    transition: .2s linear;
+    display: none;
+}
+
+
+.menu-fixed-hidden {
+    background-color: rgba(242, 247, 255, 0); 
+}
+
+
+.menu-open {
+    display: none;
+    position: relative;
+    top: -56px;
+    left: 88%;
+    z-index: 7;
+    background-color: rgba(242, 247, 255, 0.001); 
+}
+
+.menu-open:hover {
+    background-color: rgba(242, 247, 255, 0.001); 
+}
+
+.menu-open span {
+    border-radius: 2px;
+	width: 40px;
+	height: 3px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: #685ED6;
+	transition: all 0.5s;
+    opacity: 1;
+}
+.menu-open span:nth-of-type(2) {
+	top: calc(50% - 10px);
+}
+.menu-open span:nth-of-type(3) {
+	top: calc(50% + 10px);
+}
+
+
+
+.menu-open.active span:nth-of-type(1) {
+    transition: opacity .2s linear;
+    opacity: 0;
+  }
+  .menu-open.active span:nth-of-type(2) {
+    top: 50%;
+    transform: translate(-50%, 0%) rotate(45deg);  
+  }
+  .menu-open.active span:nth-of-type(3) {
+    top: 50%;
+    transform: translate(-50%, 0%) rotate(-45deg); 
+  }
+
+.open {
+    width: 177px;
+}
+
+
 
 /*Intro*/
 
@@ -96,9 +259,11 @@ h1 {
     padding-top: 150px;
     min-height: 809px;
     height: auto;
+    width: 100%;
 }
 
 .intro__inner {
+    width: 100%;
     display: flex;
     justify-content: space-between;
 }
@@ -107,8 +272,8 @@ h1 {
     z-index: 1;
     position: relative;
     object-fit: cover;
-    width: 725px;
-    height: 583px;
+    width: 60%;
+    height: auto;
 }
 
 .intro__img__2 {
@@ -127,7 +292,7 @@ h1 {
 
 @keyframes move1 {
     0% {position: absolute; left: -100px; top: -100px; }
-    100% {position: absolute; left: 850px; top: 250px; }
+    100% {position: absolute; left: 45%; top: 250px; }
 }
 
 
@@ -148,7 +313,7 @@ h1 {
 
 @keyframes move2 {
     0% {position: absolute; left: 2000px; top: -100px; }
-    100% {position: absolute; left: 1500px; top: 220px; }
+    100% {position: absolute; left: 75%; top: 220px; }
 }
 
 .intro__img__4 {
@@ -168,12 +333,14 @@ h1 {
 
 @keyframes move3 {
     0% {position: absolute; left: -200px; top: 1000px; }
-    100% {position: absolute; left: 1250px; top: 750px; }
+    100% {position: absolute; left: 65%; top: 760px; }
 }
 
 
 
-
+.intro__content {
+    width: 40%;
+}
 
 
 
@@ -210,30 +377,40 @@ h1 {
     min-height: 809px;
 }
 
+.info__content {
+    width: 50%;
+}
 .info__inner img {
-    object-fit: cover;
-    width: 411px;
-    height: 667px;
+    
+    min-width: 30%;
+    height: auto;
 }
 
 .info__inner {
+    width: 100%;
     display: flex;
     justify-content: space-between;
 }
 
 .info__title {
     font-size: 48px;
-    line-height: 32px;
+    line-height: 60px;
     margin-bottom: 68px;
 }
 
-.intro__list__item {
+.info__list__item {
+    opacity: 0;
     align-items: center;
     display: flex;
     margin-bottom: 50px;
 }
 
-.intro__list__item img {
+.animate__backInLeft {
+    animation: animate__backInLeft 2s ease forwards;
+}
+
+
+.info__list__item img {
     height: 62px;
     width: 62px;
 }
@@ -246,6 +423,8 @@ h1 {
 
 .list__title {
     font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 5px;
     font-weight: 700;
 }
 
@@ -259,7 +438,7 @@ h1 {
 
 .section {
     width: 100%;
-    padding-top: 150px;
+    padding-top: 100px;
     margin-bottom: 80px;
     min-height: 1250px;
     background: #FCFEFF;
@@ -280,7 +459,7 @@ h1 {
     font-weight: 700;
     font-size: 24px;
     line-height: 32px;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
 }
 
 .rates__items {
@@ -290,11 +469,20 @@ h1 {
 
 .rates__card {
     margin-right: 30px;
-    width: 33%;
-    height: 387px;
+    max-width: 33%;
+    min-height: 387px;
     background: #FCFEFF;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.07);
     border-radius: 6px;
+    transition: transform .2s linear; 
+}
+
+.rates__card:last-child {
+    margin-right: 0;
+}
+
+.rates__card:hover {
+    transform: scale(1.05); 
 }
 
 
@@ -322,36 +510,45 @@ h1 {
 }
 
 .rates__card button {
-    margin-top: 58px;
+    margin: 58px 30px 50px 30px;
     padding: 12px 66px;
 }
 
 /*Steps*/
     
 .steps {
-    position: relative;
     text-align: center;
     margin-top: 100px;
+    position: relative;
+}
+
+.img__line {
+    position: absolute;
+    top: 120px;
+    left: 0;
+    margin: 0 50px;
+    text-align: center;
+    z-index: 1;
 }
 
 .steps h1 {
     font-weight: 700;
     font-size: 46px;
     line-height: 64px;
-    margin-bottom: 40px;
+    margin: 0 50px 40px;
 }
 
-.step__img {
-    position: relative;
-    z-index: 1;
-   
-}
 
 .step__items {
+    text-align: center;
     display: flex;
     justify-content: space-between;
+    position: absolute;
     width: 100%;
+    height: 700px;
     z-index: 2;
+    top: 0;
+    left: 0;
 }
 
 .step .circle {
@@ -369,28 +566,27 @@ h1 {
 .step {
     position: absolute;
     z-index: 2;
-    max-width: 280px;
-    
 }
 
 .step__1 {
-    top: 160px;
-    left: 40px;
+    top: 175px;
+    left: 0%;
 }
 
+
 .step__2 {
-    top: 190px;
-    left: 480px;
+    top: 205px;
+    left: 32%;
 }
 
 .step__3 {
-    top: 120px;
-    left: 920px;
+    top: 135px;
+    left: 68%;
 }
 
 .step img {
-    width: 230px;
-    height: 470px;
+    display: block;
+    height: auto;
     margin: 0 auto;
 }
 
@@ -413,7 +609,7 @@ h1 {
 /*Reviews*/
 
 .reviews {
-    margin: 540px 0 100px 0;
+    margin: 600px 0 100px 0;
 }
 
 .reviews__header {
@@ -448,7 +644,7 @@ h1 {
     padding: 32px 32px 68px;
 }
 .reviews__content .title {
-    margin-bottom: 8px;
+    margin-bottom: 20px;
     font-size: 18px;
     line-height: 28px;
 }
@@ -486,6 +682,11 @@ h1 {
     line-height: 24px;
  }
 
+ .slick-dots li button:hover  {
+    transform: none;
+    box-shadow: none;
+ }
+
 
 
 
@@ -515,8 +716,13 @@ h1 {
 }
 
 .form__content {
-    margin: 50px 150px 86px 100px;
+    margin: 75px 150px 75px 100px;
     max-width: 445px;
+    transition: transform .2s linear; 
+}
+
+.form__content:hover {
+    transform: scale(1.05);
 }
 
 .form__title {
@@ -530,11 +736,13 @@ h1 {
 .form__img {
     width: 314px;
     height: 271px;
-    margin: 31px 0 0 50px;
+    margin: 46px 0 0 50px;
 }
 .form__img img {
     object-fit: cover;
 }
+
+
 
 .email {
     width: 100%;
@@ -548,7 +756,7 @@ h1 {
 
 .email__input {
     outline: 0;
-    width: 248px;
+    min-width: 248px;
     height: 52px;
     border-radius: 5px 0 0 5px;
     padding: 14px 16px;
@@ -559,10 +767,10 @@ h1 {
     background: #fff;
     color: #1D2530;
     border: 0;
+    transition: 0.2s linear;
 }
 
 .email__input:focus {
-    transition: 0.1s linear;
     box-shadow: -5px 0px 30px 2px rgba(188, 185, 216, 0.48);
 }
 
@@ -580,6 +788,10 @@ h1 {
     font-size: 14px;
     line-height: 20px;
     padding: 14px 24px;
+}
+
+.email__btn:hover {
+    transform: none;
 }
 
 /*Footer*/
@@ -647,7 +859,7 @@ h1 {
     width: 100%;
     position: absolute;
     bottom: 0;
-    height: 72px;
+    min-height: 72px;
     background: #141B23;
 }
 
@@ -674,6 +886,8 @@ h1 {
     transition: all 0.35s ease-in;
 }
 
+
+
 .hidden {
     opacity: 0;
     visibility: hidden;
@@ -683,7 +897,7 @@ h1 {
     border-radius: 6px;
     background: #FFFFFF;
     max-width: 500px;
-    max-height: 80%;
+    max-height: 100%;
     padding: 100px 70px 140px;
     position: absolute;
     z-index: 6;
@@ -695,10 +909,15 @@ h1 {
 
 .modal__close {
     position: relative;
-    top: -75px;
-    left: 365px;
+    top: -70px;
+    left: 100%;
     z-index: 7;
     background: none;
+}
+
+.modal__close:hover {
+    transform: none;
+    box-shadow: none;
 }
 
 .modal__content {
@@ -718,12 +937,16 @@ h1 {
     border-radius: 4px;
     outline: 0;
     border: 0;
-    padding: 8px 0 8px 20px;
+    padding: 8px 50px 8px 20px;
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
     width: 340px;
     margin-bottom: 10px;
+}
+
+.modal__content input:focus {
+    border: 1px solid #605DEC;
 }
 
 .modal__content a {
@@ -743,4 +966,83 @@ h1 {
     margin-top: 56px;
     padding: 12px 144px;
     width: 340px;
+}
+
+
+
+.password__input {
+    position: relative;
+
+}
+.password__btn {
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    top: -10px;
+    font-size: 20px;
+    color: #685ED6;
+}
+ 
+
+.password__btn.no-after::after {
+    transition: opacity 0.2s linear;
+    opacity: 0;
+} 
+
+.password__btn::after {
+    position: absolute;
+    border-top: 2px solid #605DEC;
+    content: '';
+    right: -3px;
+    top: 15px;
+    width: 30px;
+    height: 2px;
+    transform: rotate(45deg);
+    transition: opacity 0.2s linear;
+    opacity: 1;
+}
+
+
+
+.password__btn-2 {
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    top: -10px;
+    font-size: 20px;
+    color: #685ED6;
+}
+
+.password__btn-2.no-after-2::after {
+    transition: opacity 0.2s linear;
+    opacity: 0;
+} 
+
+.password__btn-2::after {
+    position: absolute;
+    border-top: 2px solid #605DEC;
+    content: '';
+    right: -3px;
+    top: 15px;
+    width: 30px;
+    height: 2px;
+    transform: rotate(45deg);
+    transition: opacity 0.2s linear;
+    opacity: 1;
+}
+
+.slick-slide { 
+    margin: 20px 20px;
+    width: 100%;
+
+}
+
+.slick-prev:before, .slick-next:before {
+    font-family: 'slick';
+    font-size: 20px;
+    line-height: 1;
+    opacity: .75;
+    color: #605DEC;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
