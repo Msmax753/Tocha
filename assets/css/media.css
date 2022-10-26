@@ -68,6 +68,10 @@
 
 @media (max-width: 1230px) {
 
+    .info {
+        padding-top: 80px;
+    }
+
     h1 {
         font-size: 36px;
         line-height: 40px;
@@ -116,7 +120,7 @@
 
 
     .section {
-        padding-top: 120px;
+        padding-top: 50px;
     }
 
     .rates__card h3 {
@@ -154,7 +158,9 @@
     }
 
     .form__img {
-        margin: 46px auto 0;
+        display: flex;
+        justify-content: center;
+        margin: 45px auto -10px;
     }
 
     .footer__inner {
@@ -309,10 +315,11 @@
     }
 
     .intro__content {
-        margin-left: 0px;
+        margin: 0 0 10px;
     }
 
     .intro__content .title {
+        margin-bottom: 10px;
         font-size: 32px;
         line-height: 38px;
     }
@@ -475,10 +482,13 @@
 
 @media (max-width: 625px) {
 
+    .section {
+        padding-top: 20px;
+    }
+
     .menu__close {
         left: 88%;
     }
-
 
     .steps h1 {
         font-size: 28px;
@@ -487,11 +497,13 @@
 
     .rates__card button {
         padding: 15px 25px;
+        margin: 40px 30px 50px 30px;
     }
+
     .modal__window {
         max-width: 500px;
         position: absolute;
-        width: 80%;
+        width: 90%;
         padding: 100px 45px 140px;
     }
 
@@ -499,10 +511,27 @@
         top: -75px;
         left: 52%;
     }
+
+    .modal__title {
+        font-size: 28px;
+    }
+
+    .modal__content input {
+        font-size: 15px;
+    }
 }
 
 
 @media (max-width: 485px) {
+
+
+    .rates__card h3 {
+        padding: 40px 12px;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 25px;
+    }
+
 
     .menu-open {
         opacity: 1;
@@ -516,7 +545,7 @@
     .modal__window {
         max-width: 500px;
         position: absolute;
-        width: 80%;
+        width: 90%;
         padding: 60px 25px 100px;
     }
     .modal__content a {

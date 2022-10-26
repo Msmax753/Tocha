@@ -182,16 +182,18 @@ h1 {
 }
 
 .menu-fixed {
-    background-color: rgba(242, 247, 255, 0.8); 
+    width: 100%;
+    height: 80px;
+
     position: absolute;
     top: 0;
     left: 0;
     z-index: 7;
-    width: 100%;
     position: fixed;
-    height: 80px;
+   
     transition: .2s linear;
     display: none;
+    background-color: rgba(242, 247, 255, 0.8);
 }
 
 
@@ -256,7 +258,7 @@ h1 {
 /*Intro*/
 
 .intro {
-    padding-top: 150px;
+    padding-top: 80px;
     min-height: 809px;
     height: auto;
     width: 100%;
@@ -876,7 +878,7 @@ h1 {
 
 .modal {
     opacity: 1;
-    z-index: 5;
+    z-index: 10;
     position: fixed;
     top: 0;
     left: 0;

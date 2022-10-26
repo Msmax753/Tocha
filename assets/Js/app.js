@@ -120,15 +120,21 @@ $(function(){
 
 
 
+// Open Menu //
 const menu = document.querySelector('.menu');
 const menuOpen = document.querySelector('.menu-open');
 const menuWindow = document.querySelector('#menu__window');
 
+
 menuOpen.addEventListener('click', function(){
+
+    let menuFixed = document.querySelector("#menu-fixed");
+
 	menu.classList.toggle('menu-visible');
     menuOpen.classList.toggle('active');
     menuWindow.classList.toggle('animate__fadeInDown');
     body.classList.toggle('body-hidden');
+    menuFixed.classList.add('menu-fixed-hidden');
 
 });
 
@@ -154,13 +160,14 @@ menu.addEventListener ('click' , function() {
         e.stopPropagation();
     });
 });
+// Open Menu //
 
 
 
 
 
 
-
+// Menu Fixed line //
 let menuFixed = $ ("#menu-fixed");
 let menuFixedH = menuFixed.innerHeight ();
 let scrollPos = $(window).scrollTop();
@@ -182,12 +189,14 @@ $(window).on("scroll", function() {
     }
     
 });
+// Menu Fixed line //
 
 
 
 
 // Open Modal 1 //
 const open_modal1 = document.querySelector('#open_modal1');
+const open_modal12 = document.querySelector('#open_modal12');
 const modal1 = document.querySelector('#modal_1');
 const close_modal1 = document.querySelector('#close_modal1');
 const body = document.querySelector("body");
@@ -195,10 +204,22 @@ const body = document.querySelector("body");
 const modal1_window = document.querySelector( '#modal1_window');
 
 
+open_modal12.addEventListener ('click' , function() {
+    modal1.classList.remove('hidden');
+    body.style.overflow = 'hidden';
+    menu.classList.remove('menu-visible');
+    menuOpen.classList.remove('active');
+
+    modal1_window.addEventListener('click', function(e) {
+        e.stopPropagation();
+    });
+
+});
+
+
 open_modal1.addEventListener ('click' , function() {
     modal1.classList.remove('hidden');
     body.style.overflow = 'hidden';
-
 
     modal1_window.addEventListener('click', function(e) {
         e.stopPropagation();
@@ -230,10 +251,26 @@ document.addEventListener('keydown', function(e) {
 
 // Open Modal 2 //
 const open_modal2 = document.querySelector('#open_modal2');
+const open_modal21 = document.querySelector('#open_modal21');
 const modal2 = document.querySelector('#modal_2');
 const close_modal2 = document.querySelector('#close_modal2');
 
 const modal2_window = document.querySelector( '#modal2_window');
+
+
+
+open_modal21.addEventListener ('click' , function() {
+    modal2.classList.remove('hidden');
+    body.style.overflow = 'hidden';
+    menu.classList.remove('menu-visible');
+    menuOpen.classList.remove('active');
+
+    modal2_window.addEventListener('click', function(e) {
+        e.stopPropagation();
+    });
+
+});
+
 
 
 open_modal2.addEventListener ('click' , function() {
@@ -266,18 +303,6 @@ document.addEventListener('keydown', function(e) {
     }
 });
 // Open Modal 2 //
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
