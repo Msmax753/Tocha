@@ -455,9 +455,7 @@
         position: absolute;
         width: 80%;
         
-
-        padding: 100px 70px 140px;
-    
+        padding: 60px 70px 80px;
     }
 
     .modal__content input {
@@ -470,7 +468,7 @@
 
     .modal__close {
         
-        top: -75px;
+        top: -35px;
         left: 58%;
     }
 

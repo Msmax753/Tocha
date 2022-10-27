@@ -137,9 +137,11 @@ h1 {
     z-index: 6;
     top: 0;
 
+    padding: 100px 0;
     width: 100%;
     background: #FFFFFF;
-    min-height: 60%;
+    max-height: 80%; 
+    min-height: 45%;
     text-align: center;
     display: flex;
     align-items: center;
@@ -896,6 +898,7 @@ h1 {
 }
 
 .modal__window {
+    overflow-y: auto;
     border-radius: 6px;
     background: #FFFFFF;
     max-width: 500px;
@@ -920,6 +923,7 @@ h1 {
 .modal__close:hover {
     transform: none;
     box-shadow: none;
+    background: none;
 }
 
 .modal__content {
@@ -952,15 +956,16 @@ h1 {
 }
 
 .modal__content a {
-    color: #605DEC;
-    text-decoration: none;
     font-weight: 400;
     font-size: 12px;
     line-height: 16px;
-    position: absolute;
-    top: 56%;
-    left: 60%;
-    text-align: right;
+
+    margin-right: 10px;
+    color: #605DEC;
+    text-decoration: none;
+
+    display: flex;
+    justify-content: right;
 }
 
 .modal__content button {
